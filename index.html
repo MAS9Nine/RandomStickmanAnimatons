@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Stickman Animations</title>
+    <link rel="icon" href="https://i.imgur.com/E5D2OmZ.png" type="image/png"> <!-- Replace IMAGE_URL with your favicon URL -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lexend', lexend;
+            margin: 0;
+            padding: 0;
+            background-color: #e7f3fe;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .video-container {
+            flex: 1 1 60%;
+            margin-right: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        #player {
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .side-content {
+            flex: 1 1 30%;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #000000;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.02);
+        }
+
+        a {
+            color: #1E88E5;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #0d47a1;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .fa {
+            padding: 10px;
+            font-size: 20px;
+            color: white;
+            border-radius: 50%;
+            margin: 5px;
+            transition: opacity 0.3s;
+            background-color: #555;
+            padding: 10px;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .video-container,
+            .side-content {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="video-container">
+            <h1>Watch Randomized Stickman Animations</h1>
+            <div id="player"></div>
+            <button id="random-btn">Load Random Video</button>
+            <div class="image-container">
+                <img src="https://i.ytimg.com/vi/O1Qbaxkp6I0/sddefault.jpg" alt="Stickman Animation" style="max-width: 100%; border-radius: 8px; margin-top: 15px;" />
+            </div>
+        </div>
+
+        <div class="side-content">
+            <div class="section">
+                <h2>What are Stickman Animations?</h2>
+                <p>Stickman animations are simple animations that use stick figures to create dynamic and engaging visuals. They often focus on storytelling, humor, or action, leading to a wide variety of creations.</p>
+            </div>
+
+            <div class="section">
+                <h2>    More Stickman Animations</h2>
+                <p>If you love stickman animations or want to learn how to create them, check out this small website called YouTube! Explore millions of community-driven channels.(Recommend watching Alan Becker)</p>
+                <a href="https://www.youtube.com/results?search_query=stickman+animation">
+                    <button>Visit YouTube</button>
+                </a>
+            </div>
+
+            <div class="feedback-section">
+                <h2>Give Feedback &amp; Suggest Ideas!</h2>
+                <p>Do you have any ideas for future stickman animations? Share them with us!</p>
+                <input placeholder="Your name or alias (Optional)" type="text">
+                <textarea placeholder="Your Feedback and Suggestions"></textarea>
+                <button>Submit Feedback</button>
+            </div>
+        </div>
+    </div>
+
+    <a href="mailto:morre74@outlook.com" class="email-link">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+    <footer>
+        <p>© RandomStickmanAnimations.net</p>
+        <div class="social-icons">
+            <a href="https://twitter.com/MAS9Nine" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/MAS9Nine" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@MAS9Nine" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        var player;
+        var videoIds = [
+            'CvfldRjkmW0',
+            'B1J6Ou4q8vE',
+            'ErMSHiQRnc8',
+            'VEJWE6cpqw0',
+            '3Dx8yL0iVzs',
+            'FWW3Fs4S-r8',
+            'u5cOwYIH0GM',
+            '7UPEJjZ0UAE',
+            'GW_fdXHOWp4',
+            'WTPt07NO61A',
+            'npTC6b5-yvM',
+            'hw4wzwYeZ0Y',
+            'jBx3vZLZJRc',
+            'HRGeBcSFuGo',
+            'VufDd-QL1c0',
+            'lhikdD6Hf2M',
+            'kA0Ywk7sQLg',
+            '3hgrw7QQpnE',
+            '-kCePEEBjvc',
+            'iVcPGxnp558',
+            'Bwlqa0j2WIQ',
+            'mlLl8eFJgkU',
+            '0a1r0JaONS4',
+            '23BwajC5CKM',
+            'dzJvuswZ5ys',
+            'f696gUJdc9A',
+            'Zdeji2zz3uQ',
+            '7wLfcW3LeEQ',
+            'bUKBlIUuWpM',
+            '5Cjrp23lBSM',
+            'BnRNrD7jK-s',
+            'CElO0A9Y-GY',
+            'E-fbaLE_0Ew',
+            '0pwZdS9DOvA',
+            'PvR3_9MCkGw',
+            'fJYpKsGroio',
+            '_vfSvckpQWo',
+            'nxM1cnphLpw',
+            'PD5Ln5obI5U',
+            'Qb1VvUf21L4',
+            'WDIeS7NHTpU',
+            'J_iatdx0OPE',
+            'c9DrryMw248',
+            'NHKc6kI-AC0',
+            's2kgkeisv34',
+            'b0Ygl4XYvuQ',
+            'h6ULbVlAK7c',
+            'y5zW1c30MGQ',
+            '8kiPjEeTaW4',
+            'OPo5_EBO5JM',
+            'MqVM5F_XvpU'
+        ];
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '390',
+                width: '640',
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            loadRandomVideo();
+        }
+
+        function loadRandomVideo() {
+            var randomId = videoIds[Math.floor(Math.random() * videoIds.length)];
+            player.loadVideoById(randomId);
+        }
+
+        document.getElementById('random-btn').addEventListener('click', loadRandomVideo);
+    </script>
+</body>
+
+</html>
